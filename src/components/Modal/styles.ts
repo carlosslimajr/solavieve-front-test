@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 interface ModalWrapperProps {
-  open?:boolean
+  open?: boolean;
 }
 export const ModalWrapper = styled.div<ModalWrapperProps>`
   position: fixed;
-  
-  display: ${props=>props.open ? 'block' : 'none'};
+
+  display: ${(props) => (props.open ? "block" : "none")};
   z-index: 1;
   left: 0;
   top: 0;
@@ -20,6 +20,7 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
 
   .modal-content {
     margin: 23.6rem auto;
+    text-align: center;
     width: 100%;
     max-width: 74.1rem;
     height: 48.866rem;
@@ -29,19 +30,21 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
     box-shadow: 0px 2px 17px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0.8rem;
 
-    small{
+    @media(max-width:768px){
+      margin-top: 8rem;
+    }
+
+    small {
       margin-top: 2rem;
       margin-bottom: 2rem;
       font-size: 1rem;
       cursor: pointer;
       transition: all 0.3s;
-      
-      :hover{
+
+      :hover {
         font-weight: bold;
       }
     }
-
-    
 
     svg {
       margin-bottom: 7.2rem;
@@ -63,7 +66,7 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
       margin-top: 8rem;
     }
 
-    @media(max-width:768px){
+    @media (max-width: 768px) {
       width: 80%;
     }
   }
