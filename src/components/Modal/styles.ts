@@ -30,7 +30,7 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
     box-shadow: 0px 2px 17px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0.8rem;
 
-    @media(max-width:768px){
+    @media (max-width: 768px) {
       margin-top: 8rem;
     }
 
